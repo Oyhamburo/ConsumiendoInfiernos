@@ -1,0 +1,14 @@
+.menu__title{
+    padding-top: 170px;
+    text-align: center;
+    color: white;
+}
+.menu__combo{
+    display: flex;
+    justify-content: center;
+}
+.container__combo{
+    display: grid;
+    grid-template-areas: 'auto auto auto auto';
+    gap: 3rem;
+}
