@@ -8,14 +8,8 @@ import { useContext } from 'react';
 
 
 
-const ListDialog = ({combo,index}) => {
-    // const {removeI} = useContext(CartContext)
-
-    // const removeIndex = () => {
-    //     console.log("indice", index)
-    //     removeI(index)
-    // }
-    const {name, id, price} = combo.data;
+const ListDialog = ({combo}) => {
+    const {name, id, price} = combo;
     return(
         <>
             <ListItem button>

@@ -3,33 +3,32 @@ import { createContext, useState } from "react"
 const CartContext = createContext()
 
 const CartProvider = ({children}) => {
-    const [numeroCarrito, setNumeroCarrito] = useState(0)
 
     const [cartProducts, setCartProducts] = useState([])
 
     const addProductToCart = (product) => {
-        // cartProducts.forEach(e => {
-        //     console.log("product.data.id: ", product.data.id)
-        //     console.log("e.data.id: ",e.data.id)
-        //     if(product.data.id == e.data.id){
-        //         e.data.cant += 1
-        //     }else{
-        //     }
-        // });
-        setCartProducts(cartProducts => [...cartProducts, product])
+        const indice = cartProducts.findIndex(p => p.name === product.name) 
+        if (indice !== -1) {
+            setCartProducts(
+                cartProducts.map((i) => {
+                    if (i.name === product.name) {
+                        return { ...i, cant: i.cant + product.cant }
+                    }
+                    else {
+                        return i
+                    }
+                })
+            )
+        } else {
+            setCartProducts([product, ...cartProducts]);
+        }
     }
-    const addNumeroCarrito = (count) => {
-        setNumeroCarrito(numeroCarrito + count)
-    }
+
     
     const data = {
-        numeroCarrito,
-        setNumeroCarrito,
-        addNumeroCarrito,
         cartProducts,
         setCartProducts,
-        addProductToCart,
-        // removeI
+        addProductToCart
     }
     return (
         <CartContext.Provider value={data}>

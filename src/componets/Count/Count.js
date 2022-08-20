@@ -9,9 +9,9 @@ import { useState } from 'react';
 import { CartContext } from '../CartContext/CartContext';
 import { useContext } from 'react';
 
-const Count = (data) => {
+const Count = ({data}) => {
     const [ count, setCount] = useState(0);
-    const {addProductToCart, addNumeroCarrito} = useContext(CartContext)
+    const {addProductToCart} = useContext(CartContext)
 
 
     const addCount = () => {
@@ -26,11 +26,11 @@ const Count = (data) => {
         }
     }
     const addCart = () => {
-        addNumeroCarrito(count)
-        if(count>0){
+        for (let index = 0; index < count; index++) {
+            data.data.cant = count;
             addProductToCart(data.data)
-            setCount(0)
         }
+        setCount(0)
     }
     return(
         <div>

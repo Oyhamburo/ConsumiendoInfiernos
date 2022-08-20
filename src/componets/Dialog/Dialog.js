@@ -28,13 +28,19 @@ export default function FullScreenDialog() {
   const handleClose = () => {
     setOpen(false);
   };
-  const {numeroCarrito, cartProducts} = useContext(CartContext)
-  console.log(cartProducts)
+  const {cartProducts} = useContext(CartContext)
+  const totalNumber = () => {
+    let count = 0
+    cartProducts.forEach(element => {
+        count = count + element.cant
+    });
+    return count
+  };
   return (
     <div>
 
       <Button color="error">
-        <Badge badgeContent={numeroCarrito} color="error" onClick={handleClickOpen}>
+        <Badge badgeContent={totalNumber()} color="error" onClick={handleClickOpen}>
             <LocalGroceryStoreIcon color="error"/>
         </Badge>
         </Button>
