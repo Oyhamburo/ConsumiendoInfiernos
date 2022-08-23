@@ -1,20 +1,6 @@
-.combo{
-    border: solid 1px black;
-    border-radius: 1rem;
-    width: 250px;
-    background-image: url("../../../public/backgroundNav.png");
-    background-color: #3a3a3a;
-
-    & img{
-        border-radius: 1rem 1rem 0 0;
-        width: 100%;
-    }
-    & div{
-        padding: 0.5rem;
-        color: white;
-        text-align: center;
-    }
+.cardProduct{
+    background-color: rgb(121, 121, 121);
 }
-.btn-add{
-    background-color: black !important;
+.padding .css-19kzrtu{
+    padding: 0rem !important;
 }

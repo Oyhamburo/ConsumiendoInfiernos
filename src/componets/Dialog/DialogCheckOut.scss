@@ -1,0 +1,11 @@
+.positionIcon{
+    position: fixed;
+    left: 81vw;
+    bottom: 5vh;
+    z-index: +99;
+    &__icon{
+        border-radius: 50%;
+        background-color: red;
+        padding: 0.5rem;
+    }
+}

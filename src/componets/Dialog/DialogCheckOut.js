@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './DialogCheckOut.scss'
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import AppBar from '@mui/material/AppBar';
@@ -18,7 +19,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullScreenDialog() {
+export default function DialogCheckOut() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -28,7 +29,7 @@ export default function FullScreenDialog() {
   const handleClose = () => {
     setOpen(false);
   };
-  const {cartProducts} = useContext(CartContext)
+  const {cartProducts,clear} = useContext(CartContext)
   const totalNumber = () => {
     let count = 0
     cartProducts.forEach(element => {
@@ -37,11 +38,16 @@ export default function FullScreenDialog() {
     return count
   };
   return (
-    <div>
+    <div className='positionIcon'>
 
-      <Button color="error">
-        <Badge badgeContent={totalNumber()} color="error" onClick={handleClickOpen}>
-            <LocalGroceryStoreIcon color="error"/>
+      <Button color="error" >
+        <Badge badgeContent={totalNumber()} color="secondary" onClick={handleClickOpen}  className='positionIcon__icon'
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+        >
+            <LocalGroceryStoreIcon color="white"  />
         </Badge>
         </Button>
       <Dialog
@@ -63,8 +69,8 @@ export default function FullScreenDialog() {
             <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
               TITULO
             </Typography>
-            <Button autoFocus color="inherit" onClick={handleClose}>
-              BOTON
+            <Button autoFocus color="inherit" onClick={()=>clear()}>
+              VACIAR
             </Button>
           </Toolbar>
         </AppBar>

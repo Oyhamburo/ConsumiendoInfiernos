@@ -39,11 +39,11 @@ const Count = ({data}) => {
             </Badge>
             <br/>
             <ButtonGroup disableElevation variant="contained" size="small" >
-                <Button onClick={removeCount}><RemoveIcon /></Button>
-                <Button onClick={addCount}><AddIcon /></Button>
+                <Button onClick={removeCount} color="secondary"><RemoveIcon /></Button>
+                <Button onClick={addCount} color="secondary"><AddIcon /></Button>
             </ButtonGroup>
             <br/>
-            <Button variant="contained" className='btn-add' onClick={addCart}>Añadir</Button>
+            <Button variant="contained" onClick={addCart} color="secondary">Añadir</Button>
             
         </div>
     )

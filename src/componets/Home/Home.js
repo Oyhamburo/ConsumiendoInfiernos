@@ -1,12 +1,25 @@
 import './Home.scss'
+import { Button } from '@mui/material'
+import DialogCheckOut from '../Dialog/DialogCheckOut'
+import Menu from '../Menu/Menu'
 const Home = () => {
-    return(
-        <body className='home'>
-            <img className='home__img' src="backgroundHome.jpg"/>
-            <section>
-                <h1>HOME</h1>
-            </section>
-        </body>
+    return (
+        <>
+            <header className='home'>
+                <article className='home__header'>
+                    <h1>LAS MEJORES HAMBURGUESAS DE AVELLANEDA</h1>
+                    <hr />
+                    <Button variant="contained" color='secondary'>
+                        Nuestro Menu
+                    </Button>
+                </article>
+            </header>
+            <body>
+                <DialogCheckOut />
+                <Menu />
+            </body>
+        </>
+
     )
 }
 

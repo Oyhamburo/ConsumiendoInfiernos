@@ -1,38 +1,29 @@
 import './NavBar.scss'
-import {Link} from 'react-router-dom'
-import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import { useContext } from 'react';
-import { CartContext } from '../CartContext/CartContext';
-import FullScreenDialog from '../Dialog/Dialog';
+import SwipeableTemporaryDrawer from '../SideBar/SideBar'
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const NavBar = () => {
 
     return(
-        <nav>
-            <div className='nav__icon'>
-                <InstagramIcon className='nav__icon__i'/>
-                <WhatsAppIcon className='nav__icon__i'/>
-                <TwitterIcon className='nav__icon__i'/>
-            </div>
-            <div className='nav__img'>
-                <img src='logo.jpg'/>
-            </div>
-            <div className='nav__li'>
-                
-                <Link className='nav__li__link' to="/">Home</Link>
-                <Link className='nav__li__link' to="/menu">Menu</Link>
-                <Link className='nav__li__link' to="/reserva">Reservas</Link>
-                <Link className='nav__li__link' to="/contacto">Coctacto</Link>
-                <Link className='nav__li__link' to="/about">About us</Link>
-                <FullScreenDialog />
-            </div>
-        </nav>
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="fixed" > 
+                <Toolbar variant="dense">
+                <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }} >
+                    <SwipeableTemporaryDrawer />
+                </IconButton>
+                <Typography variant="h6" color="inherit" component="div">
+                    menu
+                </Typography>
+                </Toolbar>
+            </AppBar>
+            
+        </Box>
     )
 }
 
 export default NavBar
-
-
-

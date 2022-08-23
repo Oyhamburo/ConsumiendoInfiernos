@@ -29,7 +29,8 @@ const Menu = () => {
 
     return(
         <>
-            <h1 className='menu__title'>TITULO CON TIPOGRAFIA</h1>
+            <h1 className='menu__title'>Nuestro Menu</h1>
+            <br/>
             <main className='menu__combo'>
                 <section className='container__combo'>
                     <ListCardProduct dataCombos={listCombos}/>
