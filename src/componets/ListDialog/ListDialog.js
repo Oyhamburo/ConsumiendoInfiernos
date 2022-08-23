@@ -9,9 +9,8 @@ import Badge from '@mui/material/Badge';
 import { CartContext } from '../CartContext/CartContext';
 import { useContext } from 'react';
 
-const ListDialog = ({ combo }) => {
-    console.log(combo)
-    const { name, id, price, src, cant } = combo;
+const ListDialog = ( combo,key ) => {
+    const { name, id, price, src, cant } = combo.data;
     const {removeProduct} = useContext(CartContext)
     return (
         <>

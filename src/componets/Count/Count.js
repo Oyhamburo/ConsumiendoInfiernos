@@ -27,8 +27,8 @@ const Count = ({data}) => {
     }
     const addCart = () => {
         for (let index = 0; index < count; index++) {
-            data.data.cant = count;
-            addProductToCart(data.data)
+            data.cant = count;
+            addProductToCart(data)
         }
         setCount(0)
     }

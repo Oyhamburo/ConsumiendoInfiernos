@@ -46,7 +46,6 @@ function a11yProps(index) {
 }
 
 const CardProductBigHell = (combo) => {
-
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -67,8 +66,9 @@ const CardProductBigHell = (combo) => {
                         />
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                                <Tab label="x2" {...a11yProps(0)} />
-                                <Tab label="x3" {...a11yProps(0)} />
+                                <Tab label="x1" {...a11yProps(0)} />
+                                <Tab label="x2" {...a11yProps(1)} />
+                                <Tab label="x3" {...a11yProps(2)} />
 
                             </Tabs>
                         </Box>
@@ -96,8 +96,9 @@ const CardProductBigHell = (combo) => {
                         />
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                                <Tab label="x2" {...a11yProps(0)} />
-                                <Tab label="x3" {...a11yProps(1)} />
+                                <Tab label="x1" {...a11yProps(0)} />
+                                <Tab label="x2" {...a11yProps(1)} />
+                                <Tab label="x3" {...a11yProps(2)} />
 
                             </Tabs>
                         </Box>
@@ -111,6 +112,35 @@ const CardProductBigHell = (combo) => {
                         </CardContent>
                         <CardActions  >
                             <Count data={combo.data.meat[1]} />
+                        </CardActions>
+                    </TabPanel>
+
+                    <TabPanel value={value} index={2} >
+
+                        <CardMedia
+                            component="img"
+                            height="160"
+                            image={combo.data.meat[2].src}
+                            alt="{name}"
+                        />
+                        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                                <Tab label="x1" {...a11yProps(0)} />
+                                <Tab label="x2" {...a11yProps(1)} />
+                                <Tab label="x3" {...a11yProps(2)} />
+
+                            </Tabs>
+                        </Box>
+                        <CardContent >
+                            <Typography gutterBottom variant="h5" component="div">
+                                {combo.data.meat[2].name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {combo.data.meat[2].name}
+                            </Typography>
+                        </CardContent>
+                        <CardActions  >
+                            <Count data={combo.data.meat[2]} />
                         </CardActions>
                     </TabPanel>
                 </Box>

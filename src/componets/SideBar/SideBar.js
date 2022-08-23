@@ -12,8 +12,16 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 
+import { CartContext } from '../CartContext/CartContext';
+import { useContext } from 'react';
+
 
 export default function SwipeableTemporaryDrawer() {
+    const {cartProducts} = useContext(CartContext)
+    console.log(cartProducts)
+
+
+
     const [state, setState] = React.useState({
         left: false
     });

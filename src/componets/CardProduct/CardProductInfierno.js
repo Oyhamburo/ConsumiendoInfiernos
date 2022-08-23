@@ -84,22 +84,12 @@ const CardProductInfierno = (combo) => {
                         />
                     </TabPanel>
 
-                    <TabPanel value={value} index={2}>
-                        <CardMedia
-                            component="img"
-                            height="160"
-                            image='argentaTriple.jpg'
-                            alt={name}
-                        />
-                    </TabPanel>
 
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                             <Tab label="x1" {...a11yProps(0)} />
                             <Tab label="x2" {...a11yProps(1)} />
                             <Tab label="x3" {...a11yProps(2)} />
-                            <Tab label="x4" {...a11yProps(3)} />
-                            <Tab label="x5" {...a11yProps(4)} />
                         </Tabs>
                     </Box>
                 </Box>
