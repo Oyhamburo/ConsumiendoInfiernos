@@ -68,7 +68,7 @@ const CardProductBigHell = (combo) => {
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                                 <Tab label="x2" {...a11yProps(0)} />
-                                <Tab label="x3" {...a11yProps(0)} />
+                                <Tab label="x3" {...a11yProps(1)} />
 
                             </Tabs>
                         </Box>
@@ -113,6 +113,7 @@ const CardProductBigHell = (combo) => {
                             <Count data={combo.data.meat[1]} />
                         </CardActions>
                     </TabPanel>
+
                 </Box>
             </Card>
             <br />

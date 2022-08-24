@@ -58,7 +58,7 @@ const combos = [
                 id: 6
             },
             {
-                name:'Big Hell Doble',
+                name:'Big Hell Triple',
                 price: 1050,
                 descrip: 'Carne x3, chedar y bacon',
                 src: './argentaTriple.jpg',
