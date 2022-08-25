@@ -15,18 +15,23 @@ const Menu = () => {
     //         resolve(combos)
     //     }, 300)
     // })
-    console.log("hola")
     const getProducts = async () => {
-        const productCollection = collection(db, 'productos')
+        const productCollection = collection(db, 'combos')
         const productSnapshot = await getDocs(productCollection)
         const productList = productSnapshot.docs.map( (doc) => {
-            console.log("data formated",doc.data)
+            let product = doc.data()
+            product.id = doc.id
+            return product
         })
-        console.log('productSnaphot: ', productSnapshot)
+        return productList
     }
 
     useEffect(() => {
         getProducts()
+        .then((res) => {
+            setListCombos(res)
+        })
+        // getProducts
         // .then( (res) => {
         //     setListCombos(res)
         // })
