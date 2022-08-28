@@ -6,7 +6,7 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { Button } from '@mui/material';
 import './ListDialog.scss'
 import Badge from '@mui/material/Badge';
-import { CartContext } from '../CartContext/CartContext';
+import { CartContext } from '../../store/CartContext/CartContext';
 import { useContext } from 'react';
 
 const ListDialog = ( combo,key ) => {

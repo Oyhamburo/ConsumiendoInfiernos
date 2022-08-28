@@ -1,6 +1,6 @@
 import './Home.scss'
 import { Button } from '@mui/material'
-import DialogCheckOut from '../Dialog/DialogCheckOut'
+import DialogCheckOut from '../../componets/Dialog/DialogCheckOut'
 import Menu from '../Menu/Menu'
 const Home = () => {
     return (

@@ -8,19 +8,20 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import LunchDiningIcon from '@mui/icons-material/LunchDining';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import MapIcon from '@mui/icons-material/Map';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
+import './SideBar.scss';
 
-import { CartContext } from '../CartContext/CartContext';
+import { CartContext } from '../../store/CartContext/CartContext';
 import { useContext } from 'react';
 
 
 export default function SwipeableTemporaryDrawer() {
     const {cartProducts} = useContext(CartContext)
-    console.log(cartProducts)
-
-
 
     const [state, setState] = React.useState({
         left: false
@@ -44,23 +45,24 @@ export default function SwipeableTemporaryDrawer() {
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
-        >
-            <List>
-                <ListItem >
+            color="default"
+            >
+            <List className='sidebar__menu'>
+                <ListItem>
                     <ListItemButton>
                         <ListItemText >
-                            <h2>Titulo</h2>
+                            <h2>Consumiendo Infiernos</h2>
                         </ListItemText >
                     </ListItemButton>
                 </ListItem>
                 <Divider />
-                <Link className='nav__li__link' to="/">
-                    <ListItem disablePadding>
+                <Link className='nav__li__link' to="/" >
+                    <ListItem disablePadding >
                         <ListItemButton>
-                            <ListItemIcon>
-                                <InboxIcon />
+                            <ListItemIcon >
+                                <LunchDiningIcon   color='primary'/>
                             </ListItemIcon>
-                            <ListItemText >
+                            <ListItemText className='sidebar__menu__text'>
                                 Menu
                             </ListItemText >
                         </ListItemButton>
@@ -71,9 +73,9 @@ export default function SwipeableTemporaryDrawer() {
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <InboxIcon />
+                                <MenuBookIcon color='primary'/>
                             </ListItemIcon>
-                            <ListItemText >
+                            <ListItemText className='sidebar__menu__text'>
                                 Reservas
                             </ListItemText >
                         </ListItemButton>
@@ -84,9 +86,9 @@ export default function SwipeableTemporaryDrawer() {
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <InboxIcon />
+                            <ShoppingCartIcon color='primary'/>
                             </ListItemIcon>
-                            <ListItemText >
+                            <ListItemText className='sidebar__menu__text'>
                                 Carrito
                             </ListItemText >
                         </ListItemButton>
@@ -97,9 +99,9 @@ export default function SwipeableTemporaryDrawer() {
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <InboxIcon />
+                                <MapIcon color='primary'/>
                             </ListItemIcon>
-                            <ListItemText >
+                            <ListItemText   className='sidebar__menu__text'>
                                 Mapa
                             </ListItemText >
                         </ListItemButton>

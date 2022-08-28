@@ -6,7 +6,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import Badge from '@mui/material/Badge';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import { useState } from 'react';
-import { CartContext } from '../CartContext/CartContext';
+import { CartContext } from '../../store/CartContext/CartContext';
 import { useContext } from 'react';
 
 const Count = ({data}) => {

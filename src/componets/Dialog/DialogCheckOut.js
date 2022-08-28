@@ -11,7 +11,7 @@ import Slide from '@mui/material/Slide';
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import Badge from '@mui/material/Badge';
 import { useContext } from 'react';
-import { CartContext } from '../CartContext/CartContext';
+import { CartContext } from '../../store/CartContext/CartContext';
 import MapDialog from '../ListDialog/MapDialog';
 
 

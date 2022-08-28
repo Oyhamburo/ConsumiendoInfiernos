@@ -1,10 +1,10 @@
 import './Menu.scss'
-import ListCardProduct from '../ListCardProduct/ListCardProduct'
-import combos from '../utils/mock'
+import ListCardProduct from '../../componets/ListCardProduct/ListCardProduct'
+import combos from '../../componets/utils/mock'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
-import db from '../utils/firebaseConfing'
+import db from '../../componets/utils/firebaseConfing'
 
 const Menu = () => {
 

@@ -1,9 +1,9 @@
 import './App.css';
 import NavBar from './componets/NavBar/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './componets/Home/Home';
-import Menu from './componets/Menu/Menu';
-import CartProvider from './componets/CartContext/CartContext';
+import Home from './pages/Home/Home';
+import Menu from './pages/Menu/Menu';
+import CartProvider from './store/CartContext/CartContext';
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 const theme = createTheme({
@@ -21,10 +21,12 @@ const theme = createTheme({
       main: '#0000ff',
     },
     background: {
-      default: '#263238',
+      default: '#640e0e',
+      paper: '#ffffff',
     },
   },
 });
+
 
 
 
@@ -32,7 +34,7 @@ function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme} >
           <body className='body'>
             <NavBar />
             <Routes>
