@@ -5,10 +5,7 @@ const PrepareOrder = () => {
     let order ="";
     return (
         <>
-            {cartProducts.map((i) => {
-                order = `${i.name}: ${i.cant} precio: ${i.price * i.cant}` 
-                return <p>{order}</p>                 
-            })}
+            {cartProducts.map((i) => <p>{`${i.name}: ${i.cant} precio: ${i.price * i.cant}`}</p>)}
         </>
     )
 }
