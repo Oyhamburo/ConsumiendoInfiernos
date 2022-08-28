@@ -16,7 +16,7 @@ const PriceTotal = () => {
     totalPrice()
     return (
         <div className="priceTotal">
-            <Link to="/contacto">
+            <Link to="/contact">
                 <Button variant="contained" color="secondary">
                     Total
                     <span >

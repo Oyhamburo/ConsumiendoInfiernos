@@ -6,14 +6,14 @@
        color: black;
     }
     &__container{
-        padding-top: 5rem;
+        padding-top: 5rem !important;
         &__validationTextField{
-            margin-top: 2rem;
+            margin-top: 2rem !important;
         }
         &__btn{
-            margin-top: 2rem;
+            margin-top: 2rem !important;
             &__2 {
-                margin-top: 1rem;
+                margin-top: 1rem !important;
             }
         }
     }

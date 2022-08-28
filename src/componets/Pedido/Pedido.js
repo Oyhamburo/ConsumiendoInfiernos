@@ -5,9 +5,23 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import PrepareOrder from './PrepareOrder';
+import { CartContext } from "../../store/CartContext/CartContext"
+import { useContext } from "react"
 
 const Pedido = () => {
     const [open, setOpen] = React.useState(false);
+    const { cartProducts } = useContext(CartContext)
+
+    const total = () => {
+        let total = 0;
+        cartProducts.map((i) => {
+            total += i.cant * i.price
+            console.log(i)
+            console.log(total)
+        })
+        return total
+    }
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -32,7 +46,11 @@ const Pedido = () => {
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        Pedido Renderizado
+                        Pedido:
+                        <br/>
+                        <PrepareOrder />
+                        <br/>
+                        Total: {total()}
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
