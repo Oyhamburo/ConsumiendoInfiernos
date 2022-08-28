@@ -3,9 +3,10 @@ import NavBar from './componets/NavBar/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Menu from './pages/Menu/Menu';
+import Cart from './pages/Cart/Cart';
 import CartProvider from './store/CartContext/CartContext';
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-
+import Contact from './pages/Contact/Contact';
 const theme = createTheme({
   palette: {
     primary: {
@@ -39,9 +40,9 @@ function App() {
             <NavBar />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/contacto" />
+              <Route path="/contact" element={<Contact />} />
               <Route path="/menu" element={<Menu />} />
-              <Route path="/about" />
+              <Route path="/cart" element={<Cart />}/>
               <Route path="/reserva" />
             </Routes>
           </body>

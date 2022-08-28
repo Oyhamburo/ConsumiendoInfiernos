@@ -14,7 +14,7 @@ const Home = () => {
                     </Button>
                 </article>
             </header>
-            <body>
+            <body className='bodyMenu'>
                 <DialogCheckOut />
                 <Menu />
             </body>

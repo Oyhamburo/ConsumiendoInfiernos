@@ -33,21 +33,22 @@ const Count = ({data}) => {
         setCount(0)
     }
     return(
-        <div>
-            <Badge badgeContent={count} color="primary">
-                <LunchDiningIcon color="action" className='iconHombur'/>
-            </Badge>
-            <br/>
+        <div className='count'>
             <ButtonGroup disableElevation variant="contained" size="small" >
                 <Button onClick={removeCount} color="secondary"><RemoveIcon /></Button>
                 <Button onClick={addCount} color="secondary"><AddIcon /></Button>
             </ButtonGroup>
-            <br/>
+
+            <Badge badgeContent={count} color="secondary">
+                <LunchDiningIcon color="primary" className='count__icon'/>
+            </Badge>
+            
             <Button variant="contained" onClick={addCart} color="secondary">Añadir</Button>
+
             
         </div>
     )
-}
+}   
 
 export default Count
 

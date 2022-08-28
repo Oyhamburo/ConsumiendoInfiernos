@@ -12,6 +12,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import MapIcon from '@mui/icons-material/Map';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import './SideBar.scss';
@@ -69,7 +70,7 @@ export default function SwipeableTemporaryDrawer() {
                     </ListItem>
                 </Link>
 
-                <Link className='nav__li__link' to="/contacto">
+                <Link className='nav__li__link' to="/contact">
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
@@ -82,7 +83,7 @@ export default function SwipeableTemporaryDrawer() {
                     </ListItem>
                 </Link>
 
-                <Link className='nav__li__link' to="/contacto">
+                <Link className='nav__li__link' to="/cart">
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
@@ -95,7 +96,7 @@ export default function SwipeableTemporaryDrawer() {
                     </ListItem>
                 </Link>
 
-                <Link className='nav__li__link' to="/contacto">
+                <Link className='nav__li__link' to="/contact">
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
@@ -103,6 +104,19 @@ export default function SwipeableTemporaryDrawer() {
                             </ListItemIcon>
                             <ListItemText   className='sidebar__menu__text'>
                                 Mapa
+                            </ListItemText >
+                        </ListItemButton>
+                    </ListItem>
+                </Link>
+
+                <Link className='nav__li__link' to="/contact">
+                    <ListItem disablePadding>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <WhatsAppIcon color='primary'/>
+                            </ListItemIcon>
+                            <ListItemText   className='sidebar__menu__text'>
+                                Contacto
                             </ListItemText >
                         </ListItemButton>
                     </ListItem>
@@ -140,3 +154,6 @@ export default function SwipeableTemporaryDrawer() {
         </div>
     );
 }
+
+
+

@@ -13,7 +13,7 @@ import Badge from '@mui/material/Badge';
 import { useContext } from 'react';
 import { CartContext } from '../../store/CartContext/CartContext';
 import MapDialog from '../ListDialog/MapDialog';
-
+import PriceTotal from '../PriceTotal/PriceTotal';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -75,8 +75,9 @@ export default function DialogCheckOut() {
           </Toolbar>
         </AppBar>
         <MapDialog data={cartProducts} />
-
+        <PriceTotal />
       </Dialog>
+
     </div>
   );
 }

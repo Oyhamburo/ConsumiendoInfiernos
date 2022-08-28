@@ -17,7 +17,7 @@ const NavBar = () => {
                     <SwipeableTemporaryDrawer />
                 </IconButton>
                 <Typography variant="h6" color="inherit" component="div">
-                    menu
+                    Consumiendo Infiernos
                 </Typography>
                 </Toolbar>
             </AppBar>
