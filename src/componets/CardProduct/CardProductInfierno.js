@@ -65,7 +65,7 @@ const CardProductInfierno = (combo) => {
                             component="img"
                             height="160"
                             image={combo.data.meat[0].src}
-                            alt="{name}"
+                            alt="foto hamburguesa"
                         />
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
@@ -97,7 +97,7 @@ const CardProductInfierno = (combo) => {
                             component="img"
                             height="160"
                             image={combo.data.meat[1].src}
-                            alt="{name}"
+                            alt="foto hamburguesa"
                         />
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
@@ -128,7 +128,7 @@ const CardProductInfierno = (combo) => {
                             component="img"
                             height="160"
                             image={combo.data.meat[2].src}
-                            alt="{name}"
+                            alt="foto hamburguesa"
                         />
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
@@ -159,7 +159,7 @@ const CardProductInfierno = (combo) => {
                             component="img"
                             height="160"
                             image={combo.data.meat[3].src}
-                            alt="{name}"
+                            alt="foto hamburguesa"
                         />
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
@@ -190,7 +190,7 @@ const CardProductInfierno = (combo) => {
                             component="img"
                             height="160"
                             image={combo.data.meat[4].src}
-                            alt="{name}"
+                            alt="foto hamburguesa"
                         />
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">

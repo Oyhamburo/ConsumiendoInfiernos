@@ -13,6 +13,11 @@ import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import MapIcon from '@mui/icons-material/Map';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import './SideBar.scss';
@@ -22,7 +27,7 @@ import { useContext } from 'react';
 
 
 export default function SwipeableTemporaryDrawer() {
-    const {cartProducts} = useContext(CartContext)
+    const { cartProducts } = useContext(CartContext)
 
     const [state, setState] = React.useState({
         left: false
@@ -47,7 +52,7 @@ export default function SwipeableTemporaryDrawer() {
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
             color="default"
-            >
+        >
             <List className='sidebar__menu'>
                 <ListItem>
                     <ListItemButton>
@@ -57,11 +62,11 @@ export default function SwipeableTemporaryDrawer() {
                     </ListItemButton>
                 </ListItem>
                 <Divider />
-                <Link className='nav__li__link' to="/" >
+                <Link className='nav__li__link' to="/ConsumiendoInfiernos" >
                     <ListItem disablePadding >
                         <ListItemButton>
                             <ListItemIcon >
-                                <LunchDiningIcon   color='primary'/>
+                                <LunchDiningIcon color='primary' />
                             </ListItemIcon>
                             <ListItemText className='sidebar__menu__text'>
                                 Menu
@@ -74,7 +79,7 @@ export default function SwipeableTemporaryDrawer() {
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <MenuBookIcon color='primary'/>
+                                <MenuBookIcon color='primary' />
                             </ListItemIcon>
                             <ListItemText className='sidebar__menu__text'>
                                 Reservas
@@ -87,7 +92,7 @@ export default function SwipeableTemporaryDrawer() {
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                            <ShoppingCartIcon color='primary'/>
+                                <ShoppingCartIcon color='primary' />
                             </ListItemIcon>
                             <ListItemText className='sidebar__menu__text'>
                                 Carrito
@@ -96,7 +101,7 @@ export default function SwipeableTemporaryDrawer() {
                     </ListItem>
                 </Link>
 
-                <Link className='nav__li__link' to="/contact">
+                {/* <Link className='nav__li__link' to="/contact">
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
@@ -107,15 +112,15 @@ export default function SwipeableTemporaryDrawer() {
                             </ListItemText >
                         </ListItemButton>
                     </ListItem>
-                </Link>
+                </Link> */}
 
                 <Link className='nav__li__link' to="/contact">
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <WhatsAppIcon color='primary'/>
+                                <WhatsAppIcon color='primary' />
                             </ListItemIcon>
-                            <ListItemText   className='sidebar__menu__text'>
+                            <ListItemText className='sidebar__menu__text'>
                                 Contacto
                             </ListItemText >
                         </ListItemButton>
@@ -123,13 +128,50 @@ export default function SwipeableTemporaryDrawer() {
                 </Link>
 
                 <Divider />
-                
+
                 <ListItem >
-                    <ListItemButton>
-                        <ListItemText >
-                            <h3>Social</h3>
-                        </ListItemText >
-                    </ListItemButton>
+                    <ListItemText>
+                        <h3>Social</h3>
+                    </ListItemText>
+                </ListItem>
+
+                <ListItem >
+                    <ListItemText className='social'>
+                        <WhatsAppIcon />
+                    </ListItemText>
+                    <ListItemText className='social'>
+                        <a href='https://www.instagram.com/consumiendoinfiernos.burgers/' target='_blank'>
+                            <InstagramIcon />
+                        </a>
+                    </ListItemText>
+                </ListItem>
+
+                <ListItem >
+                    <ListItemText>
+                        <h3>Mis Redes</h3>
+                    </ListItemText>
+                </ListItem>
+                <ListItem >
+                    <ListItemText className='sidebar__avatar'>
+                        <Avatar alt="J" src="../../../public/logo.jpg" />
+                    </ListItemText>
+                </ListItem>
+                <ListItem >
+                    <ListItemText className='sidebar__container'>
+                        <a href='https://github.com/Oyhamburo' target='_blank'  >
+                            <GitHubIcon color='primary' />
+                        </a>
+                    </ListItemText>
+                    <ListItemText className='sidebar__container'>
+                        <a href='https://www.linkedin.com/in/oyhamburo-30a058156/' target='_blank' >
+                            <LinkedInIcon color='blue' />
+                        </a>
+                    </ListItemText>
+                    <ListItemText className='sidebar__container'>
+                        <a href='https://oyhamburo.github.io/Portfolio/' target='_blank' >
+                            <NewspaperIcon color='secondary' />
+                        </a>
+                    </ListItemText>
                 </ListItem>
             </List>
 

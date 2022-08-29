@@ -40,12 +40,11 @@ function App() {
           <body className='body'>
             <NavBar />
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/ConsumiendoInfiernos" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/cart" element={<Cart />}/>
               <Route path="/booking" element={<Booking />}/>
-              <Route path="/reserva" />
             </Routes>
           </body>
         </ThemeProvider>

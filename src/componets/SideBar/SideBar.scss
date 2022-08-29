@@ -6,14 +6,26 @@
         text-decoration: none;
 
     }
-    & h2{
-        text-align: center;
-    }
-
+    & h2{text-align: center;}
+    & h3{text-align: center;}
 }   
-
+.sidebar__avatar{
+    display: flex;
+    justify-content: center;
+}
 .nav__li__link{
     text-decoration: none;
     color: black;
     
+}
+.social{
+    display: flex;
+    justify-content: center;
+}
+.sidebar__container{
+    text-align: center;
+}
+.sidebar__icon{
+    text-decoration: none;
+    color: blue;
 }
