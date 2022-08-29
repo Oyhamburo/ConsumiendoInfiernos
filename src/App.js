@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Menu from './pages/Menu/Menu';
 import Cart from './pages/Cart/Cart';
+import Booking from './pages/Booking/Booking';
 import CartProvider from './store/CartContext/CartContext';
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Contact from './pages/Contact/Contact';
@@ -43,6 +44,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/cart" element={<Cart />}/>
+              <Route path="/booking" element={<Booking />}/>
               <Route path="/reserva" />
             </Routes>
           </body>

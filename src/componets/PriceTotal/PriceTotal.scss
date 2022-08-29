@@ -2,4 +2,11 @@
     position: absolute;
     bottom: 1rem;
     left: 1rem;
+    &__text{
+        text-decoration: none !important;
+    }
+}
+.priceTotal__link{
+    text-decoration: none !important;
+
 }

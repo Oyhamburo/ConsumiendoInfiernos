@@ -77,7 +77,7 @@ const CardProductBigHell = (combo) => {
                                 {combo.data.meat[0].name}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {combo.data.meat[0].name}
+                                {combo.data.meat[0].descrip}
                             </Typography>
                         </CardContent>
                         <CardActions  >
@@ -107,7 +107,7 @@ const CardProductBigHell = (combo) => {
                                 {combo.data.meat[1].name}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {combo.data.meat[1].name}
+                                {combo.data.meat[1].descrip}
                             </Typography>
                         </CardContent>
                         <CardActions  >
@@ -136,7 +136,7 @@ const CardProductBigHell = (combo) => {
                                 {combo.data.meat[2].name}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {combo.data.meat[2].name}
+                                {combo.data.meat[2].descrip}
                             </Typography>
                         </CardContent>
                         <CardActions  >

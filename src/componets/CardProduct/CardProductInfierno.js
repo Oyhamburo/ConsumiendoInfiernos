@@ -82,7 +82,7 @@ const CardProductInfierno = (combo) => {
                                 {combo.data.meat[0].name}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {combo.data.meat[0].name}
+                                {combo.data.meat[0].descrip}
                             </Typography>
                         </CardContent>
                         <CardActions  >
@@ -114,7 +114,7 @@ const CardProductInfierno = (combo) => {
                                 {combo.data.meat[1].name}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {combo.data.meat[1].name}
+                                {combo.data.meat[1].descrip}
                             </Typography>
                         </CardContent>
                         <CardActions  >
@@ -145,7 +145,7 @@ const CardProductInfierno = (combo) => {
                                 {combo.data.meat[2].name}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {combo.data.meat[2].name}
+                                {combo.data.meat[2].descrip}
                             </Typography>
                         </CardContent>
                         <CardActions  >
@@ -176,7 +176,7 @@ const CardProductInfierno = (combo) => {
                                 {combo.data.meat[3].name}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {combo.data.meat[3].name}
+                                {combo.data.meat[3].descrip}
                             </Typography>
                         </CardContent>
                         <CardActions  >
@@ -207,7 +207,7 @@ const CardProductInfierno = (combo) => {
                                 {combo.data.meat[4].name}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {combo.data.meat[4].name}
+                                {combo.data.meat[4].descrip}
                             </Typography>
                         </CardContent>
                         <CardActions  >

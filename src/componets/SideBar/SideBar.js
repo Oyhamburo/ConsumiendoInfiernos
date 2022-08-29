@@ -70,7 +70,7 @@ export default function SwipeableTemporaryDrawer() {
                     </ListItem>
                 </Link>
 
-                <Link className='nav__li__link' to="/contact">
+                <Link className='nav__li__link' to="/booking">
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
