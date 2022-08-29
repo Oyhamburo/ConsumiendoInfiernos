@@ -7,7 +7,7 @@ const combos = [
                 name:'Infierno Simple',
                 price: 850,
                 descrip: 'Carne x1, chedar y bacon',
-                src: './hamburguesa.jpg',
+                src: 'https://www.infobae.com/new-resizer/LASkpGEhV8cxF0Y7qZSOg0OU5GY=/992x558/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/CCD5ZHAGZJFVJJFQPLLI3BDB4E.jpg',
                 cant: 0,
                 id:1
             },
@@ -15,7 +15,7 @@ const combos = [
                 name:'Infierno Doble',
                 price: 950,
                 descrip: 'Carne x2, chedar y bacon',
-                src: './hamburguesa.jpg',
+                src: 'https://www.lanacion.com.ar/resizer/Xa-4mkDETbci_NchfLOSlWG3IEI=/1200x800/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/RGDDRKNE2ZHJNB2M2DK5JKL5EI.jpg',
                 cant: 0,
                 id:2
             },
@@ -23,7 +23,7 @@ const combos = [
                 name:'Infierno Triple',
                 price: 1050,
                 descrip: 'Carne x3, chedar y bacon',
-                src: './hamburguesa.jpg',
+                src: 'https://www.infobae.com/new-resizer/LASkpGEhV8cxF0Y7qZSOg0OU5GY=/992x558/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/CCD5ZHAGZJFVJJFQPLLI3BDB4E.jpg',
                 cant: 0,
                 id:3
             },
@@ -31,7 +31,7 @@ const combos = [
                 name:'Infierno Cuadruple',
                 price: 1150,
                 descrip: 'Carne x4, chedar y bacon',
-                src: './hamburguesa.jpg',
+                src: 'https://www.infobae.com/new-resizer/LASkpGEhV8cxF0Y7qZSOg0OU5GY=/992x558/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/CCD5ZHAGZJFVJJFQPLLI3BDB4E.jpg',
                 cant: 0,
                 id:4
             },
@@ -39,7 +39,7 @@ const combos = [
                 name:'Infierno Quintuple',
                 price: 1250,
                 descrip: 'Carne x5, chedar y bacon',
-                src: './hamburguesa.jpg',
+                src: 'https://www.infobae.com/new-resizer/LASkpGEhV8cxF0Y7qZSOg0OU5GY=/992x558/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/CCD5ZHAGZJFVJJFQPLLI3BDB4E.jpg',
                 cant: 0,
                 id:5
             },
@@ -53,7 +53,7 @@ const combos = [
                 name:'Big Hell',
                 price: 950,
                 descrip: 'Carne x2, chedar y bacon',
-                src: './hamburguesa.jpg',
+                src: 'https://www.infobae.com/new-resizer/LASkpGEhV8cxF0Y7qZSOg0OU5GY=/992x558/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/CCD5ZHAGZJFVJJFQPLLI3BDB4E.jpg',
                 cant: 0,
                 id: 6
             },
@@ -75,7 +75,7 @@ const combos = [
                 name:'Paradise',
                 price: 950,
                 descrip: 'Carne x1, chedar y bacon',
-                src: './hamburguesa.jpg',
+                src: 'https://www.infobae.com/new-resizer/LASkpGEhV8cxF0Y7qZSOg0OU5GY=/992x558/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/CCD5ZHAGZJFVJJFQPLLI3BDB4E.jpg',
                 cant: 0,
                 id: 8
             },
@@ -83,7 +83,7 @@ const combos = [
                 name:'Paradise Doble',
                 price: 950,
                 descrip: 'Carne x2, chedar y bacon',
-                src: './hamburguesa.jpg',
+                src: 'https://www.lanacion.com.ar/resizer/Xa-4mkDETbci_NchfLOSlWG3IEI=/1200x800/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/RGDDRKNE2ZHJNB2M2DK5JKL5EI.jpg',
                 cant: 0,
                 id:9
             },
@@ -91,7 +91,7 @@ const combos = [
                 name:'Paradise triple',
                 price: 1050,
                 descrip: 'Carne x3, chedar y bacon',
-                src: './hamburguesa.jpg',
+                src: 'https://www.infobae.com/new-resizer/LASkpGEhV8cxF0Y7qZSOg0OU5GY=/992x558/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/CCD5ZHAGZJFVJJFQPLLI3BDB4E.jpg',
                 cant: 10
             },
         ]
