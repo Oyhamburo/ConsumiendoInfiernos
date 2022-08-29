@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ConsumiendoInfiernos/static/css/main.31464733.css",
-    "main.js": "/ConsumiendoInfiernos/static/js/main.9d50e9df.js",
+    "main.css": "/ConsumiendoInfiernos/static/css/main.58456a74.css",
+    "main.js": "/ConsumiendoInfiernos/static/js/main.5d968b8e.js",
     "static/media/backgroundHome.jpg": "/ConsumiendoInfiernos/static/media/backgroundHome.2058ef98e8d10966b81d.jpg",
     "index.html": "/ConsumiendoInfiernos/index.html",
-    "main.31464733.css.map": "/ConsumiendoInfiernos/static/css/main.31464733.css.map",
-    "main.9d50e9df.js.map": "/ConsumiendoInfiernos/static/js/main.9d50e9df.js.map"
+    "main.58456a74.css.map": "/ConsumiendoInfiernos/static/css/main.58456a74.css.map",
+    "main.5d968b8e.js.map": "/ConsumiendoInfiernos/static/js/main.5d968b8e.js.map"
   },
   "entrypoints": [
-    "static/css/main.31464733.css",
-    "static/js/main.9d50e9df.js"
+    "static/css/main.58456a74.css",
+    "static/js/main.5d968b8e.js"
   ]
 }
