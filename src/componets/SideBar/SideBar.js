@@ -141,7 +141,7 @@ export default function SwipeableTemporaryDrawer() {
                     </ListItemText>
                     <ListItemText className='social'>
                         <a href='https://www.instagram.com/consumiendoinfiernos.burgers/' target='_blank'>
-                            <InstagramIcon />
+                            <InstagramIcon color='secondary'/>
                         </a>
                     </ListItemText>
                 </ListItem>

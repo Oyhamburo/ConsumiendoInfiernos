@@ -7,45 +7,45 @@ import { collection, getDocs } from 'firebase/firestore'
 import db from '../../componets/utils/firebaseConfing'
 const Menu = () => {
 
-    const [ listCombos, setListCombos] = useState([])
+    const [listCombos, setListCombos] = useState([])
 
-    const getCombos = new Promise( (resolve,reject) => {
-        setTimeout( () => {
-            resolve(combos)
-        }, 300)
-    })
-    // const getProducts = async () => {
-    //     const productCollection = collection(db, 'combos')
-    //     const productSnapshot = await getDocs(productCollection)
-    //     const productList = productSnapshot.docs.map( (doc) => {
-    //         let product = doc.data()
-    //         product.id = doc.id
-    //         return product
-    //     })
-    //     return productList
-    // }
+    // const getCombos = new Promise( (resolve,reject) => {
+    //     setTimeout( () => {
+    //         resolve(combos)
+    //     }, 300)
+    // })
+    const getProducts = async () => {
+        const productCollection = collection(db, 'combos')
+        const productSnapshot = await getDocs(productCollection)
+        const productList = productSnapshot.docs.map((doc) => {
+            let product = doc.data()
+            product.id = doc.id
+            return product
+        })
+        return productList
+    }
 
     useEffect(() => {
 
-        getCombos
-        .then( (res) => {
-            setListCombos(res)
-        })
-        .catch( (error) => {
-            console.log("la llamada fallo")
-        })
-        .finally( () => {
+        getProducts()
+            .then((res) => {
+                setListCombos(res)
+            })
+        // .catch( (error) => {
+        //     console.log("la llamada fallo")
+        // })
+        // .finally( () => {
 
-        })
+        // })
     })
 
-    return(
+    return (
         <>
             <h1 className='menu__title'>Nuestro Menu</h1>
-            <br/>
+            <br />
             <main className='menu__combo'>
                 <section className='container__combo'>
-                    <ListCardProduct dataCombos={listCombos}/>
+                    <ListCardProduct dataCombos={listCombos} />
                 </section>
             </main>
         </>
