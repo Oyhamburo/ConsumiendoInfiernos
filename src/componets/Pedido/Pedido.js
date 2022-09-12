@@ -8,17 +8,16 @@ import DialogTitle from '@mui/material/DialogTitle';
 import PrepareOrder from './PrepareOrder';
 import { CartContext } from "../../store/CartContext/CartContext"
 import { useContext } from "react"
+import { DisabledByDefault } from '@mui/icons-material';
 
-const Pedido = () => {
+const Pedido = ({data,validation}) => {
+    const {Name,Location}= data
     const [open, setOpen] = React.useState(false);
-    const { cartProducts } = useContext(CartContext)
-
+    const { cartProducts,ingredients } = useContext(CartContext)
     const total = () => {
         let total = 0;
         cartProducts.map((i) => {
             total += i.cant * i.price
-            console.log(i)
-            console.log(total)
         })
         return total
     }
@@ -32,9 +31,7 @@ const Pedido = () => {
     };
     return (
         <>
-            <Button variant="contained" onClick={handleClickOpen}>
-                ver Pedido
-            </Button>
+            {validation() ? <Button variant="contained" onClick={handleClickOpen} >ver Pedido</Button> : <Button variant="contained" onClick={handleClickOpen} disabled >ver Pedido</Button>}
             <Dialog
                 open={open}
                 onClose={handleClose}
@@ -50,7 +47,11 @@ const Pedido = () => {
                         <br/>
                         <PrepareOrder />
                         <br/>
-                        Total: {total()}
+                        Nombre: {Name}
+                        <br/>
+                        Direccion: {Location}
+                        <br/>
+                        Total: ${total()}
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>

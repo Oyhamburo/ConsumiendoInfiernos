@@ -101,19 +101,6 @@ export default function SwipeableTemporaryDrawer() {
                     </ListItem>
                 </Link>
 
-                {/* <Link className='nav__li__link' to="/contact">
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <MapIcon color='primary'/>
-                            </ListItemIcon>
-                            <ListItemText   className='sidebar__menu__text'>
-                                Mapa
-                            </ListItemText >
-                        </ListItemButton>
-                    </ListItem>
-                </Link> */}
-
                 <Link className='nav__li__link' to="/contact">
                     <ListItem disablePadding>
                         <ListItemButton>

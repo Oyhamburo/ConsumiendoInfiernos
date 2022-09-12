@@ -8,18 +8,28 @@ import './ListDialog.scss'
 import Badge from '@mui/material/Badge';
 import { CartContext } from '../../store/CartContext/CartContext';
 import { useContext } from 'react';
+import Modal from '../Modal/Modal';
+import { useState } from 'react';
+import MailIcon from '@mui/icons-material/Mail'
+const ListDialog = ({ data, key }) => {
+    const { name, id, price, src, cant, type } = data;
+    const { removeProduct } = useContext(CartContext)
+    const [open, setOpen] = useState(false);
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
 
-const ListDialog = ( combo,key ) => {
-    const { name, id, price, src, cant } = combo.data;
-    const {removeProduct} = useContext(CartContext)
+
+
     return (
         <>
-            <ListItem button>
-                <img src={src} className='ListDialog__img' />
+            <ListItem >
+                <img src={src} className='ListDialog__img' onClick={handleClickOpen} />
+                {open ? <Modal setOpen={setOpen} src={src} type={type} name={name} /> : ''}
                 <ListItemText
                     primary={name}
-                    secondary={price}
-                />
+                    secondary={ data.listIngredients ? "Precio: "+price+" Modificada" : "Precio: "+price} 
+                />                
                 <Badge badgeContent={cant} color="secondary">
                     <FastfoodIcon color="primary" />
                 </Badge>

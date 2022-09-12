@@ -1,0 +1,9 @@
+.count{
+    display: flex;
+    align-items: center;
+    width: 340px;
+    justify-content: space-between;
+    &__icon{
+        font-size: 2rem;
+    }
+}

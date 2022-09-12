@@ -5,7 +5,7 @@ import Menu from '../Menu/Menu'
 const Home = () => {
     return (
         <>
-            <header className='home'>
+            <section className='home'>
                 <article className='home__header'>
                     <h1>LAS MEJORES HAMBURGUESAS DE AVELLANEDA</h1>
                     <hr />
@@ -13,11 +13,11 @@ const Home = () => {
                         Nuestro Menu
                     </Button>
                 </article>
-            </header>
-            <body className='bodyMenu'>
+            </section>
+            <div className='bodyMenu'>
                 <DialogCheckOut />
                 <Menu />
-            </body>
+            </div>
         </>
 
     )

@@ -2,25 +2,32 @@ import { createContext, useState } from "react"
 
 const CartContext = createContext()
 
-const CartProvider = ({children}) => {
+const CartProvider = ({ children }) => {
 
     const [cartProducts, setCartProducts] = useState([])
 
     const addProductToCart = (product) => {
-        const indice = cartProducts.findIndex(p => p.name === product.name) 
-        if (indice !== -1) {
-            setCartProducts(
-                cartProducts.map((i) => {
-                    if (i.name === product.name) {
-                        return { ...i, cant: i.cant + product.cant }
-                    }
-                    else {
-                        return i
-                    }
-                })
-            )
+        if (product.listIngredients && product.listIngredients.find((i) => i.estado == false)) {
+            product.name += "!"
+            setCartProducts([...cartProducts, product]);
         } else {
-            setCartProducts([product, ...cartProducts]);
+            const indice = cartProducts.findIndex(p => p.name === product.name)
+            if (indice !== -1) {
+                setCartProducts(
+                    cartProducts.map((i) => {
+                        // CartProduct viene con cantidad 1
+                        if (i.name === product.name) {
+                            return { ...i, cant: i.cant + product.cant }
+                        }
+                        else {
+                            return i
+                        }
+                    })
+                )
+            } else {
+                //Guardo CartProduct con cantidad elegida
+                setCartProducts([product, ...cartProducts]);
+            }
         }
     }
 
@@ -32,7 +39,7 @@ const CartProvider = ({children}) => {
         setCartProducts([]);
     }
 
-    
+
     const data = {
         cartProducts,
         setCartProducts,

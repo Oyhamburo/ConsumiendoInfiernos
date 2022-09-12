@@ -8,6 +8,7 @@ import Booking from './pages/Booking/Booking';
 import CartProvider from './store/CartContext/CartContext';
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Contact from './pages/Contact/Contact';
+import { Category } from '@mui/icons-material';
 const theme = createTheme({
   palette: {
     primary: {
@@ -42,9 +43,10 @@ function App() {
             <Routes>
               <Route path="/ConsumiendoInfiernos" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/menu" element={<Menu />} />
+              {/* <Route path="/menu" element={<Menu />} /> */}
               <Route path="/cart" element={<Cart />}/>
               <Route path="/booking" element={<Booking />}/>
+              <Route path='category/:id' element={<Home  />} />
             </Routes>
           </body>
         </ThemeProvider>

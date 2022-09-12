@@ -11,7 +11,6 @@ export default function MaterialUIPickers() {
 
   const handleChange = (newValue) => {
     setValue(newValue);
-    console.log("newValue: ",newValue)
   };
 
   return (
