@@ -15,7 +15,6 @@ const CartProvider = ({ children }) => {
             if (indice !== -1) {
                 setCartProducts(
                     cartProducts.map((i) => {
-                        // CartProduct viene con cantidad 1
                         if (i.name === product.name) {
                             return { ...i, cant: i.cant + product.cant }
                         }
@@ -25,17 +24,13 @@ const CartProvider = ({ children }) => {
                     })
                 )
             } else {
-                //Guardo CartProduct con cantidad elegida
                 setCartProducts([product, ...cartProducts]);
             }
         }
     }
 
     const removeProduct = (data) => {
-        // let pFiltrado = cartProducts.filter(i => i.id !== id)
-        // setCartProducts(pFiltrado)
         let pFiltrado = cartProducts.filter(i=> JSON.stringify(i) !== JSON.stringify(data))
-        console.log({data})
         setCartProducts(pFiltrado)
     }
 

@@ -11,7 +11,6 @@ const Menu = () => {
 
     const [listCombos, setListCombos] = useState([])
     const { category } = useParams();
-    console.log({category})
     const [loading , setLoading] = useState(true)
 
     const getProducts = async () => {
