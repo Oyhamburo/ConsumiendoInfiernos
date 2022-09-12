@@ -10,8 +10,8 @@ import { CartContext } from '../../store/CartContext/CartContext';
 import { useContext } from 'react';
 import Modal from '../Modal/Modal';
 import { useState } from 'react';
-import MailIcon from '@mui/icons-material/Mail'
-const ListDialog = ({ data, key }) => {
+const ListDialog = ({ data, key,index }) => {
+    console.log("INDEX: ", index)
     const { name, id, price, src, cant, type } = data;
     const { removeProduct } = useContext(CartContext)
     const [open, setOpen] = useState(false);
@@ -33,12 +33,11 @@ const ListDialog = ({ data, key }) => {
                 <Badge badgeContent={cant} color="secondary">
                     <FastfoodIcon color="primary" />
                 </Badge>
-                <Button onClick={() => removeProduct(id)}>
+                <Button onClick={() => removeProduct(data)}>
                     <DeleteIcon />
                 </Button>
             </ListItem>
             <Divider />
-
         </>
     )
 }

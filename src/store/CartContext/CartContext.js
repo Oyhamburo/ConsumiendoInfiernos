@@ -31,8 +31,12 @@ const CartProvider = ({ children }) => {
         }
     }
 
-    const removeProduct = (id) => {
-        setCartProducts(cartProducts.filter(i => i.id !== id))
+    const removeProduct = (data) => {
+        // let pFiltrado = cartProducts.filter(i => i.id !== id)
+        // setCartProducts(pFiltrado)
+        let pFiltrado = cartProducts.filter(i=> JSON.stringify(i) !== JSON.stringify(data))
+        console.log({data})
+        setCartProducts(pFiltrado)
     }
 
     const clear = () => {

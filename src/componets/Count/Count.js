@@ -13,7 +13,6 @@ const Count = ({data}) => {
     const [ count, setCount] = useState(0);
     const {addProductToCart} = useContext(CartContext)
 
-
     const addCount = () => {
         if(count >= 0){
             setCount( count + 1 )
@@ -26,10 +25,7 @@ const Count = ({data}) => {
         }
     }
     const addCart = () => {
-        for (let index = 0; index < count; index++) {
-            data.cant = count;
-            addProductToCart(data)
-        }
+        addProductToCart({...data, cant: count})
         setCount(0)
     }
     return(

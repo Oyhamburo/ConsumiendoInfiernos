@@ -1,20 +1,16 @@
 import './Menu.scss'
 import ListCardProduct from '../../componets/ListCardProduct/ListCardProduct'
-import combos from '../../componets/utils/mock'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
 import db from '../../componets/utils/firebaseConfing'
 import Category from '../../componets/Category/Category'
+import { useParams } from 'react-router-dom'
 const Menu = () => {
 
     const [listCombos, setListCombos] = useState([])
+    const {category} = useParams()
 
-    // const getCombos = new Promise( (resolve,reject) => {
-    //     setTimeout( () => {
-    //         resolve(combos)
-    //     }, 300)
-    // })
     const getProducts = async () => {
         const productCollection = collection(db, 'combos')
         const productSnapshot = await getDocs(productCollection)
@@ -27,18 +23,16 @@ const Menu = () => {
     }
 
     useEffect(() => {
-        // getCombos
         getProducts()
             .then((res) => {
                 setListCombos(res)
             })
-        // .catch( (error) => {
-        //     console.log("la llamada fallo")
-        // })
-        // .finally( () => {
+        .catch( (error) => {
+            console.log("la llamada fallo")
+        })
+        .finally( () => {
 
-        // })
-    // })
+        })
     },[])
 
     return (

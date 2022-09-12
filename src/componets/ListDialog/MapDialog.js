@@ -5,8 +5,8 @@ const MapDialog = ({data}) => {
     return(
         <>
             <List>
-                {data.map( (combo) => {
-                    return <ListDialog data={combo} key={combo.id} />
+                {data.map( (combo,index) => {
+                    return <ListDialog data={combo} index={index} />
                 })}
             </List>
         </>

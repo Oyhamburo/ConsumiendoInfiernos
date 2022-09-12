@@ -7,30 +7,32 @@ import InputLabel from '@mui/material/InputLabel';
 import './Category.scss';
 
 const Category = () => {
-
-    const [prendas, setPrendas] = useState([]);
-
-    const [age, setAge] = useState('');
+    const [tipo, setTipo] = useState('');
 
     const handleChange = (event) => {
-        setAge(event.target.value);
+      setTipo(event.target.value);
     };
 
     return (
         <div className="category" >
-            <FormControl fullWidth  >
-                <InputLabel id="demo-simple-select-label" className="inputLabel" >Age</InputLabel>
+            <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">Tipo</InputLabel>
                 <Select
-                    className="select"
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={age}
-                    label="Age"
+                    value={tipo}
+                    label="Tipo"
                     onChange={handleChange}
                 >
-                    <Link to="/category/clasicas" ><MenuItem value={10}>Clasicas</MenuItem></Link>
-                    <Link to="/category/tostados" ><MenuItem value={10}>Tostados</MenuItem></Link>
-                    <Link to="/category/vegui" ><MenuItem value={10}>Veguie</MenuItem></Link>
+                    <MenuItem value={'Clasica'} to="/ConsumiendoInfiernos/category/clasica" as={Link}>
+                        Clasica
+                    </MenuItem>
+                    <MenuItem value={'Vegui'} to="/ConsumiendoInfiernos/category/vegui" as={Link}>
+                        Vegui
+                    </MenuItem>
+                    <MenuItem value={'Papas'} to="/ConsumiendoInfiernos/category/papas" as={Link}>
+                        Papas
+                    </MenuItem>
                 </Select>
             </FormControl>
         </div>
