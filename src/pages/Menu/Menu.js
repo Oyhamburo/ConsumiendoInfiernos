@@ -4,12 +4,15 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
 import db from '../../componets/utils/firebaseConfing'
-import Category from '../../componets/Category/Category'
+import SelectCategory from '../../componets/Category/Category'
 import { useParams } from 'react-router-dom'
+import { CircularProgress } from '@mui/material'
 const Menu = () => {
 
     const [listCombos, setListCombos] = useState([])
-    const {category} = useParams()
+    const { category } = useParams();
+    console.log({category})
+    const [loading , setLoading] = useState(true)
 
     const getProducts = async () => {
         const productCollection = collection(db, 'combos')
@@ -23,26 +26,36 @@ const Menu = () => {
     }
 
     useEffect(() => {
-        getProducts()
-            .then((res) => {
-                setListCombos(res)
-            })
-        .catch( (error) => {
-            console.log("la llamada fallo")
+        setListCombos([])
+        setLoading(true)
+        getProducts().then( (combos) => {
+            setLoading(false)
+            category ? filterProductByCategory(combos, category) : setListCombos(combos)
         })
-        .finally( () => {
+    }, [category])
 
+    const filterProductByCategory = (array , category) => {
+        return array.map( (combo, i) => {
+            if(combo.category === category) {
+               return setListCombos(listCombos => [...listCombos, combo]);
+            }
         })
-    },[])
+    }
 
     return (
-        <>  
-            <Category   />
+        <>
+            <SelectCategory />
             <h1 className='menu__title'>Nuestro Menu</h1>
             <br />
+
             <main className='menu__combo'>
                 <section className='container__combo'>
-                    <ListCardProduct dataCombos={listCombos} />
+                    {loading ?
+                        (<div className='container-progress'><CircularProgress /></div>)
+                        :
+                        (<> <ListCardProduct dataCombos={listCombos} /> </>)
+                    }
+                    
                 </section>
             </main>
         </>

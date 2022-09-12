@@ -6,7 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import './Category.scss';
 
-const Category = () => {
+const SelectCategory = () => {
     const [tipo, setTipo] = useState('');
 
     const handleChange = (event) => {
@@ -24,13 +24,13 @@ const Category = () => {
                     label="Tipo"
                     onChange={handleChange}
                 >
-                    <MenuItem value={'Clasica'} to="/ConsumiendoInfiernos/category/clasica" as={Link}>
+                    <MenuItem value={'Clasica'} to="/ConsumiendoInfiernos/clasica" as={Link}>
                         Clasica
                     </MenuItem>
-                    <MenuItem value={'Vegui'} to="/ConsumiendoInfiernos/category/vegui" as={Link}>
+                    <MenuItem value={'Vegui'} to="/ConsumiendoInfiernos/vegui" as={Link}>
                         Vegui
                     </MenuItem>
-                    <MenuItem value={'Papas'} to="/ConsumiendoInfiernos/category/papas" as={Link}>
+                    <MenuItem value={'Papas'} to="/ConsumiendoInfiernos/papas" as={Link}>
                         Papas
                     </MenuItem>
                 </Select>
@@ -39,5 +39,5 @@ const Category = () => {
     )
 }
 
-export default Category
+export default SelectCategory
 

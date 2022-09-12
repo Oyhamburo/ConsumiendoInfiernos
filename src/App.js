@@ -46,7 +46,7 @@ function App() {
               {/* <Route path="/menu" element={<Menu />} /> */}
               <Route path="/cart" element={<Cart />}/>
               <Route path="/booking" element={<Booking />}/>
-              <Route path='/ConsumiendoInfiernos/category/:id' element={<Home  />} />
+              <Route path='/ConsumiendoInfiernos/:category' element={<Home  />} />
             </Routes>
           </body>
         </ThemeProvider>
